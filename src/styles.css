@@ -1,6 +1,6 @@
 .container {
   display: block;
-  max-width: 600px;
+  max-width: 650px;
   margin: 40px 40px;
   padding: 30px 60px;
   border: 1px solid lightgray;
@@ -21,11 +21,11 @@ body {
 }
 
 h1 {
-  color: #7c7c7c;
-  font-size: 24px;
-  font-weight: 100;
-  line-height: 28px;
-  margin: 0;
+  color: black;
+  font-size: 26px;
+  font-weight: 100, bold;
+  line-height: 5px, 20px;
+  margin: 0, 5px;
 }
 
 ul {
@@ -42,6 +42,7 @@ li {
   line-height: 1;
   list-style: none;
 }
+
 
 .weather-app {
   background: radial-gradient(592px at 48.2% 50%, rgba(255, 255, 249, 0.6) 0%, rgb(160, 199, 254) 74.6%);
@@ -76,4 +77,12 @@ li {
 
 .row {
   color: #7c7c7c;
+}
+.clearfix .active{
+    color:rgb(33, 33, 33);
+    cursor:default;
+}
+
+.clearfix .active:hover {
+    text-decoration: none; 
 }
