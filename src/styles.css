@@ -9,6 +9,7 @@
   box-shadow: 5px 3px 20px lightgrey;
   word-spacing: 3px;
 }
+
 .items {
   font-size: large;
   text-decoration: none;
@@ -74,9 +75,19 @@ li {
 .search-form {
   margin-bottom: 20px;
 }
-
-.row {
-  color: #7c7c7c;
+.weather-forecast{
+    text-align: center;
+    color:#000;
+}
+.weather-forecast-date{
+    font-size: 16px;
+    opacity:0.6;
+}
+.weather-forecast-temperatures{
+    font-size: 12px;
+}
+.weather-forecast-temperature-min{
+    opacity:0.6;
 }
 .clearfix .active{
     color:rgb(33, 33, 33);
