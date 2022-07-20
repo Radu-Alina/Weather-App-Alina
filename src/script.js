@@ -1,4 +1,5 @@
-function formatDate(date) {
+function formatDate(timestamp) {
+    let date=new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -28,7 +29,6 @@ function formatDay(timestamp) {
     let days=["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
     return days[day];
-
 }
 
 function displayForecast(response) {
@@ -40,7 +40,7 @@ function displayForecast(response) {
     forecast.forEach(function(forecastDay, index) {
         if (index < 6) {
     forecastHTML= 
-    forecastHTML + 
+      forecastHTML + 
             `
                 <div class="col-2">
                     <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
@@ -54,7 +54,7 @@ function displayForecast(response) {
                         <span class="weather-forecast-temperature-min">
                             ${Math.round(forecastDay.temp.min)}°C</span>
                     </div>
-                    </div>
+                </div>
              `; 
               }
              })    
@@ -71,6 +71,7 @@ function getForecast(coordinates) {
 }
 
 function displayWeatherCondition(response) {
+    let temperatureElement=document.querySelector("#temperature");
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
